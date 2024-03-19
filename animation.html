@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            perspective: 300px;
+        }
+        /* .main{
+            height: 100px;
+            width: 100px;
+            position: relative;
+            margin-top: 200px;
+            margin-left: 200px;
+            background-color: red;
+            animation-name: abc;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-delay: -2s;
+            animation-direction:alternate-reverse;
+        } */
+        div{
+            height: 50px;
+            width: 150px;
+            background-color: aqua;
+            margin: 10px;
+            position: relative;
+            animation-name: abc;
+            animation-duration: 6s;
+            /* animation-iteration-count: infinite; */
+        }
+        #a{
+            animation-timing-function: linear;
+        }
+        #b{
+            animation-timing-function: ease;
+        }
+        #c{
+            animation-timing-function: ease-in;
+        }
+        #d{
+            animation-timing-function: ease-out;
+        }
+        #e{
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes abc {
+            /* from{
+                background-color: blue;
+            }
+            to{
+                background-color: aqua;
+            } */
+            /* 0%{
+                background-color: red;
+                transform: rotate(-60deg);
+            }
+            25%{
+                background-color: yellow;
+            }
+            50%{
+                background-color: green;
+                transform: rotateX(30deg);
+            }
+            75%{
+                background-color:blue;
+                transform: rotateY(30deg);
+            }
+            100%{
+                background-color: purple;
+            } */
+            /* 0%{
+                background-color: red;
+                top: 0;
+                left: 0;
+            }
+            25%{
+                background-color:yellow;
+                top: 0;
+                left: 250px;
+            }
+            50%{
+                background-color:green;
+                top: 250px;
+                left: 250px;
+            }
+            75%{
+                background-color:purple;
+                top: 250px;
+                left: 0px;
+            }
+            100%{
+                background-color:aqua;
+                top: 0px;
+                left: 0px;
+            } */
+            from{left: 0;}
+            to{left: 400px;}
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="main">heelo</div> -->
+    <div id="a">linear</div>
+    <div id="b">ease</div>
+    <div id="c">ease-in</div>
+    <div id="d">ease-out</div>
+    <div id="e">ease-in-out</div>
+</body>
+</html>

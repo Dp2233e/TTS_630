@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{
+            color: red;
+            font-size: 50px;
+        }
+        p::first-line{
+            color: red;
+            font-size: 50px;
+        }
+        /* li::marker{
+            color: blueviolet;
+        } */
+        p::selection{
+            color: red;
+            background-color: yellow;
+        }
+        li::before{
+           
+            content: url(sm.png);
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima voluptatem adipisci ut. Corporis pariatur error velit eveniet facere magni unde, modi corrupti, natus consequuntur magnam totam odit, sunt veniam ipsum dicta? Ipsam atque ut ex, voluptatibus saepe, facere nesciunt repellendus vitae nisi at facilis, necessitatibus sequi laudantium ipsum accusantium quis!
+    </p>
+    <ul>
+        <li>a</li>
+    </ul>
+</body>
+</html>
