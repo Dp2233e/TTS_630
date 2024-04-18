@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 3px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+    }
+    body{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    
+</style>
+
+<body>
+    <div class="main">
+        <img src="./251014_12-thums-up-soft-drink.webp" alt="" style="height: 200px;">
+        <h1 id="quant1">Quantity is : 0</h1>
+        <h1 id="result1">Initially Price is : 0</h1>
+        <button onclick="Add('quant1', 'result1', 40)">Add</button>
+        <button onclick="Remove('quant1', 'result1', 40)">Remove</button>
+    </div>
+    <div class="jack">
+        <img src="./jackdeni.avif" alt="" style="height: 200px;">
+        <h1 id="quant2">Quantity is : 0</h1>
+        <h1 id="result2">Initially Price is : 0</h1>
+        <button onclick="Add('quant2', 'result2', 95)">Add</button>
+        <button onclick="Remove('quant2', 'result2', 95)">Remove</button>
+    </div>
+    <div class="jamseon">
+        <img src="./jameson.jpg" alt="" style="height: 200px;">
+        <h1 id="quant3">Quantity is : 0</h1>
+        <h1 id="result3">Initially Price is : 0</h1>
+        <button onclick="Add('quant3', 'result3', 450)">Add</button>
+        <button onclick="Remove('quant3', 'result3', 450)">Remove</button>
+    </div>
+    <div class="simroff">
+        <img src="./simroff.jpg" alt="" style="height: 200px;">
+        <h1 id="quant4">Quantity is : 0</h1>
+        <h1 id="result4">Initially Price is : 0</h1>
+        <button onclick="Add('quant4', 'result4', 350)">Add</button>
+        <button onclick="Remove('quant4', 'result4', 350)">Remove</button>
+    </div>
+</body>
+<script>
+    function Add(quantId, resultId, price) {
+        var h1 = document.getElementById(quantId);
+        var priceDisplay = document.getElementById(resultId);
+        var count = parseInt(h1.innerText.split(": ")[1]) || 0; // Get current count or default to 0
+        count++;
+
+        h1.innerHTML = "Quantity is : " + count;
+        priceDisplay.innerHTML = "Now Total Price is : " + count * price;
+    }
+
+    function Remove(quantId, resultId, price) {
+        var h1 = document.getElementById(quantId);
+        var priceDisplay = document.getElementById(resultId);
+        var count = parseInt(h1.innerText.split(":")[1]) || 0; // Get current count or default to 0
+        if (count < 1) {
+            h1.innerHTML = "Quantity is : 0";
+            priceDisplay.innerHTML = "Now Total Price is : 0";
+        } else {
+            count--;
+            h1.innerHTML = "Quantity is : " + count;
+            priceDisplay.innerHTML = "Now Total Price is : " + count * price;
+        }
+    }
+</script>
+
+</html>
